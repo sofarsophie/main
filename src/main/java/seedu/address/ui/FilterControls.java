@@ -42,8 +42,12 @@ public class FilterControls extends UiPart<Region> {
         super(FXML);
         this.logic = logic;
         setDropDown();
+        handleItemSelection();
     }
 
+    /**
+     * Sets the items in the dropdown list.
+     */
     private void setDropDown() {
         filterByDropdown.getItems().addAll(
                 "Name",
@@ -53,21 +57,28 @@ public class FilterControls extends UiPart<Region> {
                 "Group"
         );
         filterByDropdown.getSelectionModel().selectFirst();
+    }
+
+    /**
+     * Handles the event when a user selects an item from the dropdown list.
+     * Sets the matching prefix and triggers logic to execute a new sort command with the prefix.
+     */
+    private void handleItemSelection() {
         filterByDropdown.setOnAction((event) -> {
             String selectedField = filterByDropdown.getSelectionModel().getSelectedItem().toString();
             Prefix prefix = null;
             switch (selectedField) {
-            case "Name": prefix = PREFIX_NAME;
-                break;
-            case "Address": prefix = PREFIX_ADDRESS;
-                break;
-            case "Phone": prefix = PREFIX_PHONE;
-                break;
-            case "Email": prefix = PREFIX_EMAIL;
-                break;
-            case "Group": prefix = PREFIX_GROUP;
-                break;
-            default: prefix = PREFIX_NAME;
+                case "Name": prefix = PREFIX_NAME;
+                    break;
+                case "Address": prefix = PREFIX_ADDRESS;
+                    break;
+                case "Phone": prefix = PREFIX_PHONE;
+                    break;
+                case "Email": prefix = PREFIX_EMAIL;
+                    break;
+                case "Group": prefix = PREFIX_GROUP;
+                    break;
+                default: prefix = PREFIX_NAME;
             }
             try {
                 CommandResult commandResult = logic.execute("sort " + prefix);
