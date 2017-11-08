@@ -13,7 +13,7 @@ import seedu.address.model.customfields.CustomField;
 
 
 /**
- * Tests that any of {@code ReadOnlyPerson}'s Name, Phone, Email or Address
+ * Tests that any of {@code ReadOnlyPerson}'s fields
  * partially matches any of the keywords identified by prefixes.
  */
 public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson> {
