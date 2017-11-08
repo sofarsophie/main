@@ -10,7 +10,7 @@
    <SplitPane dividerPositions="0.40822784810126583" prefHeight="45.0" prefWidth="314.0">
       <items>
           <Label fx:id="dropdownLabel" prefHeight="17.0" prefWidth="150.0" styleClass="label-bright" text="Filter by..." textFill="WHITE" />
-          <ComboBox fx:id="filterByDropdown" prefHeight="27.0" prefWidth="136.0" />
+          <ComboBox fx:id="sortByDropdown" prefHeight="27.0" prefWidth="136.0" />
       </items>
    </SplitPane>
 </VBox>
