@@ -68,17 +68,17 @@ public class SortControls extends UiPart<Region> {
             String selectedField = sortByDropdown.getSelectionModel().getSelectedItem().toString();
             Prefix prefix = null;
             switch (selectedField) {
-                case "Name": prefix = PREFIX_NAME;
-                    break;
-                case "Address": prefix = PREFIX_ADDRESS;
-                    break;
-                case "Phone": prefix = PREFIX_PHONE;
-                    break;
-                case "Email": prefix = PREFIX_EMAIL;
-                    break;
-                case "Group": prefix = PREFIX_GROUP;
-                    break;
-                default: prefix = PREFIX_NAME;
+            case "Name": prefix = PREFIX_NAME;
+                break;
+            case "Address": prefix = PREFIX_ADDRESS;
+                break;
+            case "Phone": prefix = PREFIX_PHONE;
+                break;
+            case "Email": prefix = PREFIX_EMAIL;
+                break;
+            case "Group": prefix = PREFIX_GROUP;
+                break;
+            default: prefix = PREFIX_NAME;
             }
             try {
                 CommandResult commandResult = logic.execute("sort " + prefix);
