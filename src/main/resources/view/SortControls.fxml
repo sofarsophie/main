@@ -9,8 +9,13 @@
 <VBox prefHeight="45.0" prefWidth="318.0" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <SplitPane dividerPositions="0.40822784810126583" prefHeight="45.0" prefWidth="314.0">
       <items>
+<<<<<<< HEAD:src/main/resources/view/FilterControls.fxml
           <Label fx:id="dropdownLabel" prefHeight="17.0" prefWidth="150.0" styleClass="label-bright" text="Sort by..." textFill="WHITE" />
           <ComboBox fx:id="filterByDropdown" prefHeight="27.0" prefWidth="136.0" />
+=======
+          <Label fx:id="dropdownLabel" prefHeight="17.0" prefWidth="150.0" styleClass="label-bright" text="Filter by..." textFill="WHITE" />
+          <ComboBox fx:id="sortByDropdown" prefHeight="27.0" prefWidth="136.0" />
+>>>>>>> cf121e92140dbc09c740188a00a87de2035c59fe:src/main/resources/view/SortControls.fxml
       </items>
    </SplitPane>
 </VBox>

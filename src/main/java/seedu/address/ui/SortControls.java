@@ -23,38 +23,49 @@ import seedu.address.logic.parser.Prefix;
 import seedu.address.logic.parser.exceptions.ParseException;
 
 /**
- * The UI component that is responsible for processing filter.
+ * The UI component that is responsible for processing a GUI-interaction triggered sort.
  */
-public class FilterControls extends UiPart<Region> {
+public class SortControls extends UiPart<Region> {
 
-    private static final String FXML = "FilterControls.fxml";
+    private static final String FXML = "SortControls.fxml";
     private final Logger logger = LogsCenter.getLogger(CommandBox.class);
     private final Logic logic;
     private ListElementPointer historySnapshot;
 
     @FXML
-    private ComboBox filterByDropdown;
+    private ComboBox sortByDropdown;
 
     @FXML
     private Label dropdownLabel;
 
-    public FilterControls(Logic logic) {
+    public SortControls(Logic logic) {
         super(FXML);
         this.logic = logic;
         setDropDown();
+        handleItemSelection();
     }
 
+    /**
+     * Sets the items in the dropdown list.
+     */
     private void setDropDown() {
-        filterByDropdown.getItems().addAll(
+        sortByDropdown.getItems().addAll(
                 "Name",
                 "Address",
                 "Phone",
                 "Email",
                 "Group"
         );
-        filterByDropdown.getSelectionModel().selectFirst();
-        filterByDropdown.setOnAction((event) -> {
-            String selectedField = filterByDropdown.getSelectionModel().getSelectedItem().toString();
+        sortByDropdown.getSelectionModel().selectFirst();
+    }
+
+    /**
+     * Handles the event when a user selects an item from the dropdown list.
+     * Sets the matching prefix and triggers logic to execute a new sort command with the prefix.
+     */
+    private void handleItemSelection() {
+        sortByDropdown.setOnAction((event) -> {
+            String selectedField = sortByDropdown.getSelectionModel().getSelectedItem().toString();
             Prefix prefix = null;
             switch (selectedField) {
             case "Name": prefix = PREFIX_NAME;

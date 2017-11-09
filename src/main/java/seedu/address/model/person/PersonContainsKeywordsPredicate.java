@@ -15,7 +15,7 @@ import seedu.address.model.tag.Tag;
 
 
 /**
- * Tests that any of {@code ReadOnlyPerson}'s Name, Phone, Email or Address
+ * Tests that any of {@code ReadOnlyPerson}'s fields
  * partially matches any of the keywords identified by prefixes.
  */
 public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson> {

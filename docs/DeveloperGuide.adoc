@@ -389,17 +389,15 @@ private Optional<List<Name>> parseNamesForSearch(List<String> names) throws Ille
 
 The method above returns an Optional so that when a user does not input any name fields to search, the method still returns. +
 
-These parsed arguments are delivered to the `PersonContainsKeywordsPredicate` (`Predicate`) by creating a `FindFields` class within the `PersonContainsKeywordsPredicate` class. For each searchable field, the FindFields class uses a list to store the search inputs. +
+These parsed arguments are delivered to the `PersonContainsKeywordsPredicate` (`Predicate`) by creating a `FindFields` class within the `PersonContainsKeywordsPredicate` class. For each searchable field, the FindFields class uses a list to store the search inputs. For instance, keywords that are a `Name` are saved in a list like below. +
+ +
 
 [source,java]
 ----
 private List<Name> nameKeywords;
-private List<Phone> phoneKeywords;
-private List<Email> emailKeywords;
-private List<Address> addressKeywords;
 ----
 
-The class also provides one setter and two getter methods for each of the fields. The former getter method returns a Optional, while the latter returns a Stream. The latter was implemented so that `getNameKeywords().map(List::stream).orElseGet(Stream::empty)` does not have to be repeated multiple times. Below is an example of the two 'getter' methods for `Name`: +
+The class also provides one setter and two getter methods for each of the fields. The former getter method returns a Optional, while the latter returns a Stream. The latter was implemented so that `getNameKeywords().map(List::stream).orElseGet(Stream::empty)` does not have to be repeated multiple times. Below is an example of the two getter methods for `Name`: +
 
 [source,java]
 ----
@@ -412,10 +410,17 @@ public Stream<Name> getNameKeywordsStream() {
 }
 ----
 
-After a successful parsing, the execution of the `find` command can be continued. The `find` command now returns partial matches. +
+By having a method that returns a stream, the stream is able to call the `anyMatch()` method to check if the stream contains any of the given `Person`s fields.
+ 
+[source,java]
+---
+(findFields.getNameKeywordsStream().anyMatch(keyword
+->StringUtil.containsPartialTextIgnoreCase(person.getName().fullName,keyword.fullName)))
+---
+ 
+After successful parsing, `FindCommand` is executed as per other commands. The `find` command now returns partial matches. +
 
 The diagram below shows how the enhanced `find` command works. +
-
 
 
 ==== Design Considerations
@@ -491,6 +496,10 @@ The `sort` command allows users to sort their contacts by any given field, with 
 Upon executing the command, the `model` executes `sortFilteredPersonList`, which sorts the AddressBook according to the given field. +
 
 To enable the sort, a `ReadOnlyPersonComparator` is defined with an overridden `compare` method, that holds a static `Prefix` variable to compare two `ReadOnlyPerson` objects by. +
+
+The implementation involves a UI element, implemented using Java FX. A dropdown UI element is more intuitive for users who prefer GUI controls over CLI controls. A `SortControls` stack plane is placed inside the `PersonList` vertical box. When a user selects a sort parameter from the dropdown, it triggers the logic to execute a command with the relevant parameter. +
+ 
+A `ComboBox` was used to implement the dropdown. CSS codes were written for the dropdown so that the dropdown and the list cells change shade upon `hover`. This improves the user experience by explicitly showing the system response. +
 
 ==== Design Considerations
 
