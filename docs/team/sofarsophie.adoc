@@ -6,7 +6,7 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 == Project: AddressBook - Level 4
 AddressBook - Level 4 is a desktop address book application used for teaching Software Engineering principles. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 6 kLoC.
 
-*Code contributed*: [https://github.com/CS2103AUG2017-F11-B1/main/blob/master/collated/main/sofarsophie.md[Functional Code]] [https://github.com/CS2103AUG2017-F11-B1/main/blob/master/collated/test/sofarsophie.md[Test Code]
+*Code contributed*: [https://github.com/CS2103AUG2017-F11-B1/main/blob/master/collated/main/sofarsophie.md[Functional Code]] [https://github.com/CS2103AUG2017-F11-B1/main/blob/master/collated/test/sofarsophie.md[Test Code] [https://github.com/CS2103AUG2017-F11-B1/main/blob/master/collated/unused/sofarsophie.md[Unused Code]
 
 === Enhancement Added: Enhance `FindCommand`
 
@@ -57,3 +57,9 @@ place all the contacts with number starting with 6 at the top.
 include::../DeveloperGuide.adoc[tag=sort]
 
 ---
+
+=== Other Contributions
+
+==== Acceptance Testing
+
+Caught bugs and gave suggestions for product https://github.com/CS2103AUG2017-T17-B4/main/issues[OneBook]
