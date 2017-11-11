@@ -6,8 +6,9 @@ import seedu.address.model.person.PersonContainsKeywordsPredicate;
 import seedu.address.model.person.ReadOnlyPerson;
 
 /**
- * Finds and lists all persons in address book whose name contains any of the argument keywords.
- * Keyword matching is case sensitive.
+ * Finds and lists all persons in address book whose fields contain any of the argument keywords.
+ * Any number of arguments for each field is supported.
+ * Keyword matching is non-case sensitive.
  */
 public class FindCommand extends Command {
 
@@ -16,18 +17,17 @@ public class FindCommand extends Command {
 
     //@@author sofarsophie
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Finds all persons whose name, phone, email, "
-            + "or address contain at least one of the specified keywords by parameter "
-            + "(case-sensitive) and displays them as a list with index numbers. "
+            + "address, tag or group contain at least one of the keywords specified by parameter "
+            + "and displays them as a list with index numbers. "
             + "Each parameter can be specified any number of times.\n"
-            + "Parameters: [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [MORE_PARAMETERS]...\n"
-            + "Example: " + COMMAND_WORD + " n/alice p/910 a/bukit e/pp@pp.com";
+            + "Parameters: [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [g/GROUP] [MORE_PARAMETERS]...\n"
+            + "Example: " + COMMAND_WORD + " a/bukit a/jurong g/Savings";
 
     private final Predicate<ReadOnlyPerson> predicate;
 
     public FindCommand(PersonContainsKeywordsPredicate predicate) {
         this.predicate = predicate;
     }
-
     //@@author
 
     @Override
