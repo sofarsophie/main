@@ -149,7 +149,7 @@ Clears all existing custom fields and adds the custom field `School:NUS`.
 
 === [Since v1.2] Locating persons by other fields: `find`
 
-Finds persons whose field matches any of the given fields, with the exception of tags.
+Finds persons whose field matches any of the given fields.
 Format: `find [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [g/GROUP] [t/TAG]`
 
 ****
@@ -169,6 +169,8 @@ Examples:
 Returns `Johnathan Kim` and `John Doe`
 * `find n/Bet p/9999 e/helloTim@gmail.com` +
 Returns any person having names containing `Bet`, a phone number containing `9999`, or email address `helloTim@gmail.com`
+* `find t/shopkeeper g/Retail`
+Returns any persons with the `shopkeeper` tag in the `Retail` group.
 // end::find[]
 
 === Deleting a person : `delete`
