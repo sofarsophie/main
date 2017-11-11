@@ -6,6 +6,7 @@ import javafx.util.Pair;
 
 import seedu.address.commons.core.index.Index;
 
+//@@author sofarsophie
 public class EditHistoryMap {
 
     private final HashMap<Index, ArrayList<Pair<String, String>>> internalMap = new HashMap<>();
@@ -31,3 +32,4 @@ public class EditHistoryMap {
         return internalMap;
     }
 }
+//@@author

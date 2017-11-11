@@ -7,6 +7,7 @@ import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.logic.commands.EditHistoryCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 
+//@@author sofarsophie
 public class EditHistoryCommandParser {
 
     /**
@@ -25,3 +26,4 @@ public class EditHistoryCommandParser {
         }
     }
 }
+//@@author

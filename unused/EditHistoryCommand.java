@@ -5,6 +5,7 @@ import static java.util.Objects.requireNonNull;
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.exceptions.CommandException;
 
+//@@author sofarsophie
 public class EditHistoryCommand extends Command {
 
     public static final String COMMAND_WORD = "edit_history";
@@ -33,3 +34,4 @@ public class EditHistoryCommand extends Command {
         return new CommandResult(MESSAGE_SUCCESS);
     }
 }
+//@@author
