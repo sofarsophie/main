@@ -19,7 +19,8 @@ public class SortCommandParser implements Parser<SortCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the SortCommand
      * and returns an SortCommand object for execution.
-     * @throws ParseException if the user input does not conform the expected format
+     * If there are no arguments, returns a SortCommand object with the name prefix by default.
+     * @throws ParseException if the user input does not conform the expected format.
      */
     public SortCommand parse(String args) throws ParseException {
         String trimmedArgs = args.trim();

@@ -22,19 +22,20 @@ public class SortCommandParserTest {
         assertParseSuccess(parser, "", new SortCommand());
     }
 
-    @Test
-    public void parse_namePrefixArg_returnSortCommand() {
-        assertParseSuccess(parser, PREFIX_NAME.toString(), new SortCommand(PREFIX_NAME));
-    }
 
     @Test
-    public void parse_validArg_returnSortCommand() {
+    public void parse_validArg_returnsSortCommand() {
         assertParseSuccess(parser, PREFIX_ADDRESS.toString(), new SortCommand(PREFIX_ADDRESS));
     }
 
     @Test
     public void parse_invalidArg_throwsParseException() {
-        assertParseFailure(parser, "a",
+        // Non-prefix argument
+        assertParseFailure(parser, "name",
+                String.format(MESSAGE_INVALID_COMMAND_FORMAT, SortCommand.MESSAGE_USAGE));
+
+        // Two same prefixes repeated
+        assertParseFailure(parser, PREFIX_ADDRESS.toString() + PREFIX_ADDRESS.toString(),
                 String.format(MESSAGE_INVALID_COMMAND_FORMAT, SortCommand.MESSAGE_USAGE));
     }
 
