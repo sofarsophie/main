@@ -68,7 +68,8 @@ public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson
     }
 
     /**
-     * Stores the fields to search with.
+     * Stores the list of fields to search with.
+     * Supports operations to return a {@code Stream} or an {@code Optional} of the keywords.
      */
     public static class FindFields {
         private List<Name> nameKeywords;
@@ -95,11 +96,11 @@ public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson
             this.nameKeywords = names;
         }
 
-        public Optional<List<Name>> getNameKeywords() {
+        private Optional<List<Name>> getNameKeywords() {
             return Optional.ofNullable(nameKeywords);
         }
 
-        public Stream<Name> getNameKeywordsStream() {
+        private Stream<Name> getNameKeywordsStream() {
             return this.getNameKeywords().map(List::stream).orElseGet(Stream::empty);
         }
 
@@ -107,11 +108,11 @@ public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson
             this.phoneKeywords = phones;
         }
 
-        public Optional<List<Phone>> getPhoneKeywords() {
+        private Optional<List<Phone>> getPhoneKeywords() {
             return Optional.ofNullable(phoneKeywords);
         }
 
-        public Stream<Phone> getPhoneKeywordsStream() {
+        private Stream<Phone> getPhoneKeywordsStream() {
             return this.getPhoneKeywords().map(List::stream).orElseGet(Stream::empty);
         }
 
@@ -119,11 +120,11 @@ public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson
             this.emailKeywords = emails;
         }
 
-        public Optional<List<Email>> getEmailKeywords() {
+        private Optional<List<Email>> getEmailKeywords() {
             return Optional.ofNullable(emailKeywords);
         }
 
-        public Stream<Email> getEmailKeywordsStream() {
+        private Stream<Email> getEmailKeywordsStream() {
             return this.getEmailKeywords().map(List::stream).orElseGet(Stream::empty);
         }
 
@@ -131,11 +132,11 @@ public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson
             this.groupKeywords = group;
         }
 
-        public Optional<List<Group>> getGroupsKeywords() {
+        private Optional<List<Group>> getGroupsKeywords() {
             return Optional.ofNullable(groupKeywords);
         }
 
-        public Stream<Group> getGroupsKeywordsStream() {
+        private Stream<Group> getGroupsKeywordsStream() {
             return this.getGroupsKeywords().map(List::stream).orElseGet(Stream::empty);
         }
 
@@ -143,11 +144,11 @@ public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson
             this.tagKeywords = tags;
         }
 
-        public Optional<List<String>> getTagKeywords() {
+        private Optional<List<String>> getTagKeywords() {
             return Optional.ofNullable(tagKeywords);
         }
 
-        public Stream<String> getTagsKeywordsStream() {
+        private Stream<String> getTagsKeywordsStream() {
             return this.getTagKeywords().map(List::stream).orElseGet(Stream::empty);
         }
 
@@ -155,11 +156,11 @@ public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson
             this.addressKeywords = addresses;
         }
 
-        public Optional<List<Address>> getAddressKeywords() {
+        private Optional<List<Address>> getAddressKeywords() {
             return Optional.ofNullable(addressKeywords);
         }
 
-        public Stream<Address> getAddressKeywordsStream() {
+        private Stream<Address> getAddressKeywordsStream() {
             return this.getAddressKeywords().map(List::stream).orElseGet(Stream::empty);
         }
 
@@ -167,11 +168,11 @@ public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson
             this.customFieldKeywords = fields;
         }
 
-        public Optional<List<String>> getFieldKeywords() {
+        private Optional<List<String>> getFieldKeywords() {
             return Optional.ofNullable(customFieldKeywords);
         }
 
-        public Stream<String> getFieldsKeywordsStream() {
+        private Stream<String> getFieldsKeywordsStream() {
             return this.getFieldKeywords().map(List::stream).orElseGet(Stream::empty);
         }
     }

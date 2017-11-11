@@ -23,50 +23,70 @@ public class FindFieldsBuilder {
     }
 
     /**
-     * Sets the {@code Name} of the {@code FindFields} that we are building.
+     * Sets the {@code nameKeywords} list of the {@code FindFields} that we are building.
      */
     public FindFieldsBuilder withName(String... names) {
         try {
             fieldsToFind.setNameKeywords(ParserUtil.parseNames(Arrays.asList(names)));
         } catch (IllegalValueException ive) {
-            throw new IllegalArgumentException("names are expected to be unique.");
+            throw new IllegalArgumentException("invalid name.");
         }
         return this;
     }
 
     /**
-     * Sets the {@code Phone} of the {@code FindFields} that we are building.
+     * Sets the {@code phoneKeywords} list of the {@code FindFields} that we are building.
      */
     public FindFieldsBuilder withPhone(String... phones) {
         try {
             fieldsToFind.setPhoneKeywords(ParserUtil.parsePhones(Arrays.asList(phones)));
         } catch (IllegalValueException ive) {
-            throw new IllegalArgumentException("phone is expected to be unique.");
+            throw new IllegalArgumentException("invalid phone.");
         }
         return this;
     }
 
     /**
-     * Sets the {@code Email} of the {@code FindFields} that we are building.
+     * Sets the {@code emailKeywords} list of the {@code FindFields} that we are building.
      */
-    public FindFieldsBuilder withEmail(String... emails) {
+    public FindFieldsBuilder withEmail(String emails) {
         try {
             fieldsToFind.setEmailKeywords(ParserUtil.parseEmails(Arrays.asList(emails)));
         } catch (IllegalValueException ive) {
-            throw new IllegalArgumentException("email is expected to be unique.");
+            throw new IllegalArgumentException("invalid email!");
         }
         return this;
     }
 
     /**
-     * Sets the {@code Address} of the {@code FindFields} that we are building.
+     * Sets the {@code addressKeywords} list of the {@code FindFields} that we are building.
      */
     public FindFieldsBuilder withAddress(String... addresses) {
         try {
             fieldsToFind.setAddressKeywords(ParserUtil.parseAddresses(Arrays.asList(addresses)));
         } catch (IllegalValueException ive) {
-            throw new IllegalArgumentException("address is expected to be unique.");
+            throw new IllegalArgumentException("invalid address.");
         }
+        return this;
+    }
+
+    /**
+     * Sets the {@code groupKeywords} list of the {@code FindFields} that we are building.
+     */
+    public FindFieldsBuilder withGroups(String... groups) {
+        try {
+            fieldsToFind.setGroupKeywords(ParserUtil.parseGroup(Arrays.asList(groups)));
+        } catch (IllegalValueException ive) {
+            throw new IllegalArgumentException("invalid groups.");
+        }
+        return this;
+    }
+
+    /**
+     * Sets the {@code tagKeywords} list of the {@code FindFields} that we are building.
+     */
+    public FindFieldsBuilder withTags(String... tags) {
+        fieldsToFind.setTagKeywords(Arrays.asList(tags));
         return this;
     }
 
