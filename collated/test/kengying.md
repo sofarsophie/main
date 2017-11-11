@@ -1,5 +1,5 @@
 # kengying
-###### \java\seedu\address\logic\commands\AddCommandTest.java
+###### /java/seedu/address/logic/commands/AddCommandTest.java
 ``` java
         @Override
         public List<Tag> getTagList() {
@@ -13,7 +13,7 @@
             return null;
         }
 ```
-###### \java\seedu\address\logic\commands\ListCommandTest.java
+###### /java/seedu/address/logic/commands/ListCommandTest.java
 ``` java
 /**
  * Contains integration tests (interaction with the Model) and unit tests for ListCommand.
@@ -55,7 +55,7 @@ public class ListCommandTest {
 
 }
 ```
-###### \java\seedu\address\logic\parser\AddCommandParserTest.java
+###### /java/seedu/address/logic/parser/AddCommandParserTest.java
 ``` java
         // invalid field
         assertParseFailure(parser, AddCommand.COMMAND_WORD + NAME_DESC_BOB + PHONE_DESC_BOB + EMAIL_DESC_BOB
@@ -66,7 +66,7 @@ public class ListCommandTest {
         assertParseFailure(parser, AddCommand.COMMAND_WORD + NAME_DESC_BOB + PHONE_DESC_BOB + EMAIL_DESC_BOB
                 + ADDRESS_DESC_BOB + INVALID_GROUP_DESC + VALID_TAG_FRIEND, Group.MESSAGE_GROUP_CONSTRAINTS);
 ```
-###### \java\seedu\address\logic\parser\AddressBookParserTest.java
+###### /java/seedu/address/logic/parser/AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_list() throws Exception {
@@ -78,7 +78,7 @@ public class ListCommandTest {
         assertTrue(parser.parseCommand(ListCommand.COMMAND_ALIAS + " all") instanceof ListCommand);
     }
 ```
-###### \java\seedu\address\logic\parser\ListCommandParserTest.java
+###### /java/seedu/address/logic/parser/ListCommandParserTest.java
 ``` java
 public class ListCommandParserTest {
 
@@ -115,7 +115,7 @@ public class ListCommandParserTest {
 
 }
 ```
-###### \java\seedu\address\model\AddressBookTest.java
+###### /java/seedu/address/model/AddressBookTest.java
 ``` java
     @Test
     public void getGroupList_modifyList_throwsUnsupportedOperationException() {
@@ -123,7 +123,7 @@ public class ListCommandParserTest {
         addressBook.getGroupList().remove(0);
     }
 ```
-###### \java\seedu\address\model\UniqueGroupListTest.java
+###### /java/seedu/address/model/UniqueGroupListTest.java
 ``` java
 public class UniqueGroupListTest {
     @Rule
@@ -137,7 +137,7 @@ public class UniqueGroupListTest {
     }
 }
 ```
-###### \java\seedu\address\testutil\EditPersonDescriptorBuilder.java
+###### /java/seedu/address/testutil/EditPersonDescriptorBuilder.java
 ``` java
     /**
      * Sets the {@code Group} of the {@code EditPersonDescriptorBuilder} that we are building.
@@ -151,7 +151,7 @@ public class UniqueGroupListTest {
         return this;
     }
 ```
-###### \java\seedu\address\testutil\PersonBuilder.java
+###### /java/seedu/address/testutil/PersonBuilder.java
 ``` java
     /**
      * Sets the {@code Group} of the {@code Person} that we are building.
@@ -165,7 +165,7 @@ public class UniqueGroupListTest {
         return this;
     }
 ```
-###### \java\systemtests\EditCommandSystemTest.java
+###### /java/systemtests/EditCommandSystemTest.java
 ``` java
         /* Case: invalid group -> rejected */
         assertCommandFailure(EditCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased() + INVALID_GROUP_DESC,

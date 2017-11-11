@@ -1,5 +1,5 @@
 # kengying
-###### \ListCommandTest.java
+###### /ListCommandTest.java
 ``` java
 
 @Test
@@ -51,7 +51,7 @@ public void execute_wrongKeyword_zeroPersonFound(){
 }
 
 ```
-###### \PersonContainsTagsPredicate.java
+###### /PersonContainsTagsPredicate.java
 ``` java
 /**
  * Tests that any of {@code ReadOnlyPerson}'s Name, Phone, Email or Address matches any of the keywords given.
