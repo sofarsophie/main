@@ -1,4 +1,3 @@
-//@@author sofarsophie
 package seedu.address.testutil;
 
 import java.util.Arrays;
@@ -7,6 +6,7 @@ import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.logic.parser.ParserUtil;
 import seedu.address.model.person.PersonContainsKeywordsPredicate.FindFields;
 
+//@@author sofarsophie
 /**
  * A utility class to help with building FindFields objects.
  */

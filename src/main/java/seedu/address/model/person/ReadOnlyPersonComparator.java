@@ -43,7 +43,6 @@ public class ReadOnlyPersonComparator implements Comparator<ReadOnlyPerson> {
         } else if (compareByPrefix.equals(PREFIX_NAME)) {
             return a.getName().compareTo(b.getName());
         }
-
         return 0;
     }
 

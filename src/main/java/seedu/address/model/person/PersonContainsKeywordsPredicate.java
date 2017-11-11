@@ -1,4 +1,3 @@
-//@@author sofarsophie
 
 package seedu.address.model.person;
 
@@ -13,10 +12,10 @@ import seedu.address.model.customfields.CustomField;
 import seedu.address.model.group.Group;
 import seedu.address.model.tag.Tag;
 
-
+//@@author sofarsophie
 /**
  * Tests that any of {@code ReadOnlyPerson}'s fields
- * partially matches any of the keywords identified by prefixes.
+ * partially matches any of the keywords identified by the prefixes.
  */
 public class PersonContainsKeywordsPredicate implements Predicate<ReadOnlyPerson> {
 
