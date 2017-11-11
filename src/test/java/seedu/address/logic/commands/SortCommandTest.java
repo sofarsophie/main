@@ -1,4 +1,3 @@
-//@@author sofarsophie
 package seedu.address.logic.commands;
 
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;
@@ -21,6 +20,7 @@ import seedu.address.model.ModelManager;
 import seedu.address.model.UserPrefs;
 import seedu.address.testutil.AddressBookBuilder;
 
+//@@author sofarsophie
 /**
  * Contains integration tests (interaction with the Model) and unit tests for SortCommand.
  */

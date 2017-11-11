@@ -1,4 +1,3 @@
-//@@author sofarsophie
 package seedu.address.ui;
 
 import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;
@@ -22,6 +21,7 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.Prefix;
 import seedu.address.logic.parser.exceptions.ParseException;
 
+//@@author sofarsophie
 /**
  * The UI component that is responsible for processing a GUI-interaction triggered sort..
  */

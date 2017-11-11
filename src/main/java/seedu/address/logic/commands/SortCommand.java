@@ -1,4 +1,3 @@
-//@@author sofarsophie
 package seedu.address.logic.commands;
 
 import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;
@@ -13,6 +12,7 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.Prefix;
 import seedu.address.model.person.ReadOnlyPerson;
 
+//@@author sofarsophie
 /**
  * Sorts and displays the persons listing.
  */
