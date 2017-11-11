@@ -31,8 +31,8 @@ public class FindCommandParserTest {
         FindCommand expectedFindCommand =
                 new FindCommand(new PersonContainsKeywordsPredicate(fieldsToFind));
         // Multiple whitespaces before and after keyword
-        assertParseSuccess(parser, FindCommand.COMMAND_WORD + "     " + PREFIX_NAME + " Alice      \t"
-                , expectedFindCommand);
+        assertParseSuccess(parser, FindCommand.COMMAND_WORD + "     " + PREFIX_NAME + " Alice      \t",
+                expectedFindCommand);
     }
 
     @Test
