@@ -395,7 +395,7 @@ VBox .cell_small_label {
     -fx-font-size: 11;
 }
 
-//@@author syy94
+/*@@author syy94*/
 #group {
     -fx-text-fill: white;
     -fx-background-color: #3e7b91;
@@ -403,4 +403,4 @@ VBox .cell_small_label {
     -fx-border-radius: 500;
     -fx-background-radius: 500;
 }
-//@@author
+/*@@author*/

@@ -105,6 +105,7 @@ public class ModelManager extends ComponentManager implements Model {
             addressBook.updatePerson(currReadOnlyPerson, newPerson);
         }
     }
+    //@@author
 
     //@@author kengying
     @Override
@@ -145,6 +146,7 @@ public class ModelManager extends ComponentManager implements Model {
     }
     //@@author
 
+    //@@author sofarsophie
     @Override
     public ObservableList<ReadOnlyPerson> sortFilteredPersonList(ObservableList<ReadOnlyPerson> personsList,
                                                                  Prefix prefix) {
