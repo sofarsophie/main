@@ -29,7 +29,7 @@ public class SortCommandTest {
     private Model model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
 
     @Test
-    public void execute_sort_success() throws Exception {
+    public void execute_sortByName_success() throws Exception {
         Prefix prefix = PREFIX_ADDRESS;
         SortCommand sortCommand = prepareCommand(model, prefix);
         String expectedMessage = SortCommand.MESSAGE_SORT_SUCCESS;
@@ -40,7 +40,7 @@ public class SortCommandTest {
     }
 
     @Test
-    public void execute_twoPersonsList_success() throws Exception {
+    public void execute_sortTwoPersonsList_success() throws Exception {
         Prefix prefix = PREFIX_NAME;
         AddressBook ab = new AddressBookBuilder().withPerson(getTypicalPersons().get(1))
                 .withPerson(getTypicalPersons().get(0)).build();
@@ -54,7 +54,7 @@ public class SortCommandTest {
     }
 
     @Test
-    public void execute_emptyList_throwsCommandException() {
+    public void execute_sortEmptyList_throwsCommandException() {
         Prefix prefix = PREFIX_EMAIL;
         Model emptyModel = new ModelManager(new AddressBook(), new UserPrefs());
         String expectedMessage = Messages.MESSAGE_EMPTY_PERSON_LIST;
