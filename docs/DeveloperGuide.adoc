@@ -367,7 +367,7 @@ Certain properties of the application can be controlled (e.g App name, logging l
 // tag::find[]
 === Find
 
-The `find` command was enhanced to allow a more rigorous search. The new find command allows users to search for Persons in the humanDEX using fields such as Name, Email, Phone, Address, Group and Tag.
+The `find` command was enhanced to allow a more rigorous search. The new find command allows users to search for Persons in the humanDEX using any fields.
 It supports partial search and users are required to input fields using prefixes.
 
 ==== Implementation

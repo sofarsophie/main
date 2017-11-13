@@ -20,7 +20,8 @@ public class FindCommand extends Command {
             + "address, tag or group contain at least one of the keywords specified by parameter "
             + "and displays them as a list with index numbers. "
             + "Each parameter can be specified any number of times.\n"
-            + "Parameters: [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [g/GROUP] [c/CUSTOMFIELD] [t/TAG]...\n"
+            + "Parameters: [n/NAME]... [p/PHONE]... [e/EMAIL]... [a/ADDRESS]... [g/GROUP]... "
+            + "[c/CUSTOMFIELD]... [t/TAG]...\n"
             + "Example: " + COMMAND_WORD + " n/alice p/910 a/bukit e/pp@pp.com c/meeting";
 
     private final Predicate<ReadOnlyPerson> predicate;

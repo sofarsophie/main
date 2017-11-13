@@ -153,7 +153,7 @@ Clears all existing custom fields and adds the custom field `School:NUS`.
 === [Since v1.2] Locating persons by other fields: `find`
 
 Finds persons whose field matches any of the given fields.
-Format: `find prefix/INPUT [n/NAME]... [p/PHONE]... [e/EMAIL]... [a/ADDRESS]... [g/GROUP]... [t/TAG]...`
+Format: `find prefix/INPUT [n/NAME]... [p/PHONE]... [e/EMAIL]... [a/ADDRESS]... [g/GROUP]... [t/TAG]... [c/CUSTOMFIELD]...`
 
 ****
 * The search is case insensitive. e.g `Email@Email.com` will match `email@email.com`
@@ -352,7 +352,7 @@ e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 123466
 e.g. `delete 3`
 * *Edit* : `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [-t/TAG]... [+t/TAG]... [clearTag/] [g/GROUP]` +
 e.g. `edit 2 n/James Lee e/jameslee@example.com`
-* *Find by field* : `find [n/NAME]... [p/PHONE]... [e/EMAIL]... [a/ADDRESS]... [t/TAG]... [g/GROUP]...` +
+* *Find by field* : `find [n/NAME]... [p/PHONE]... [e/EMAIL]... [a/ADDRESS]... [t/TAG]... [g/GROUP]... [c/CUSTOMFIELD]` +
 e.g. `find p/99991234`
 e.g. `find t/colleagues t/clients g/Savings`
 * *List* : `list [SEARCH_TERM]`
