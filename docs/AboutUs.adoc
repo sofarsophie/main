@@ -13,7 +13,7 @@ We are a team based in the http://www.comp.nus.edu.sg[School of Computing, Natio
 
 === Law Keng Ying
 image::kengying.png[width="150", align="left"]
-{empty}[http://github.com/kengying[github]] [https://github.com/CS2103AUG2017-F11-B1/main/blob/master/docs/team/kengying.adoc[portfolio]]
+{empty}[http://github.com/kengying[github]] [<<kengying#, portfolio>>]
 
 Role: Developer +
 Responsibilities: Logic
@@ -22,7 +22,7 @@ Responsibilities: Logic
 
 === Sim Yan Yu
 image::syy94.jpg[width="150", align="left"]
-{empty}[http://github.com/syy94[github]] [https://github.com/CS2103AUG2017-F11-B1/main/blob/master/docs/team/syy94.adoc[portfolio]]
+{empty}[http://github.com/syy94[github]] [<<syy94#, portfolio>>]
 
 Role: Developer +
 Responsibilities: UI
@@ -31,7 +31,7 @@ Responsibilities: UI
 
 === Park Se Hyun, Sophie
 image::sofarsophie.png[width="150", align="left"]
-{empty}[http://github.com/sofarsophie[github]] [https://github.com/CS2103AUG2017-F11-B1/main/blob/master/docs/team/sofarsophie.adoc[portfolio]]
+{empty}[http://github.com/sofarsophie[github]] [<<sofarsophie#, portfolio>>]
 
 Role: Developer +
 Responsibilities: Model
